@@ -1,0 +1,4 @@
+title: My blog title
+author: haiqi
+permalink: /:title/
+markdown: kramdown
