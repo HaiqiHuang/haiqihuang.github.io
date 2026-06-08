@@ -1,6 +1,6 @@
 ---
 layout: default
-title: My Personal Blog
+title: Haiqi Huang
 ---
 
 <h1>Latest Thinking</h1>
