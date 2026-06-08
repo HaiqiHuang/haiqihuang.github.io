@@ -1,4 +1,6 @@
-title: My blog title
+title: Haiqi's Space
 author: haiqi
+email: haiqi.hawk.huang@gmail.com
+description: Nihil in terris felicius est quam mollis somnulus.
 permalink: /:title/
 markdown: kramdown
