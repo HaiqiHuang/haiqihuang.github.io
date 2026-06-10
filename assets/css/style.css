@@ -17,6 +17,7 @@ body {
   width: 90%; 
   margin: 0 auto;   /* 整体居中 */
   padding: 20px;
+  padding-bottom: 80px; /* 防止内容被 fixed footer 遮挡 */
 }
 
 /* 3. 顶部导航栏美化 */
@@ -120,7 +121,24 @@ a:hover {
 }
 
 /* =========================================
-   6. 响应式自适应排版 (Media Queries)
+   6. 底部固定页脚 (Fixed Footer)
+   ========================================= */
+footer {
+  position: fixed;       /* 核心魔法：将元素固定在浏览器视窗的相对位置 */
+  bottom: 0;             /* 紧贴屏幕最底部 */
+  left: 0;
+  width: 100%;           /* 宽度占满整个屏幕 */
+  text-align: center;    /* 让里面的文字永远居中 */
+  background-color: var(--bg-color); /* 【关键】必须加背景色，否则滚动时会和正文文字重叠打架 */
+  border-top: 1px solid var(--border-color); /* 顶部加上一条分割线，这里用的是实线 solid */
+  padding: 15px 0;       /* 上下留出一点呼吸空间 */
+  z-index: 999;          /* 层级调高，确保它永远盖在正文内容上面，不被遮挡 */
+  font-size: 0.9em;      /* 页脚字体通常稍微小一点 */
+  color: var(--meta-color); 
+}
+
+/* =========================================
+   7. 响应式自适应排版 (Media Queries)
    放在最底部，根据屏幕变大自动放宽页面
    ========================================= */
 
