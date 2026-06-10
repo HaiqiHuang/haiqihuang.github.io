@@ -74,12 +74,15 @@ a:hover {
 }
 
 .card-title {
-  color: var(--link-color); 
-  font-size: 1rem;
+  color: var(--text-color); 
+  font-size: 1.6rem;
+  font-weight:700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-color);
 }
 
 .education-list {
