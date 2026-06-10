@@ -61,6 +61,38 @@ a:hover {
   margin-bottom: 30px;
 }
 
+/* =========================================
+   卡片式布局 (参考学术主页风格) - 【帮你找回来了！】
+   ========================================= */
+.profile-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.card-title {
+  color: var(--link-color); 
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.education-list {
+  list-style-type: square;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.education-list li { margin-bottom: 15px; }
+.education-list li:last-child { margin-bottom: 0; }
+.degree-name { font-weight: 600; color: var(--text-color); }
+.degree-meta { font-size: 0.9em; color: var(--meta-color); margin-top: 2px; }
+
 /* 教育经历的细节子列表 */
 .degree-details-list {
   list-style-type: circle; /* 使用空心圆点作为细节的符号 */
@@ -101,7 +133,6 @@ a:hover {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 5px;
-  /* 颜色和交互效果会自动继承你之前在全局定义的 <a> 标签样式 */
 }
 
 /* 文章日期弱化显示 */
@@ -121,19 +152,24 @@ a:hover {
 }
 
 /* =========================================
-   6. 底部固定页脚 (Fixed Footer)
+   6. 底部固定页脚 (Fixed Footer) - 【对齐修复版】
    ========================================= */
 footer {
-  position: fixed;       /* 核心魔法：将元素固定在浏览器视窗的相对位置 */
-  bottom: 0;             /* 紧贴屏幕最底部 */
-  left: 0;
-  width: 100%;           /* 宽度占满整个屏幕 */
-  text-align: center;    /* 让里面的文字永远居中 */
-  background-color: var(--bg-color); /* 【关键】必须加背景色，否则滚动时会和正文文字重叠打架 */
-  border-top: 1px solid var(--border-color); /* 顶部加上一条分割线，这里用的是实线 solid */
-  padding: 15px 0;       /* 上下留出一点呼吸空间 */
-  z-index: 999;          /* 层级调高，确保它永远盖在正文内容上面，不被遮挡 */
-  font-size: 0.9em;      /* 页脚字体通常稍微小一点 */
+  position: fixed;       
+  bottom: 0;             
+  
+  /* --- 居中魔法开始 --- */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;            /* 初始宽度和 body 同步为 90% */
+  /* --- 居中魔法结束 --- */
+
+  text-align: center;    
+  background-color: var(--bg-color); 
+  border-top: 1px solid var(--border-color); 
+  padding: 15px 0;       
+  z-index: 999;          
+  font-size: 0.9em;      
   color: var(--meta-color); 
 }
 
@@ -144,16 +180,16 @@ footer {
 
 /* 当屏幕大于等于 768px (平板/小笔记本) */
 @media screen and (min-width: 768px) {
-  body {
-    width: 80%; /* 屏幕变宽了，留白变多，比例收缩一点 */
-    max-width: 850px; /* 设定一个适中的上限 */
+  body, footer {         /* 【关键】把 footer 加上，神同步宽度 */
+    width: 80%; 
+    max-width: 850px; 
   }
 }
 
 /* 当屏幕大于等于 1200px (台式机大屏幕) */
 @media screen and (min-width: 1200px) {
-  body {
+  body, footer {         /* 【关键】把 footer 加上，神同步宽度 */
     width: 70%;
-    max-width: 1100px; /* 电脑大屏下解锁更宽的布局 */
+    max-width: 1100px; 
   }
 }
