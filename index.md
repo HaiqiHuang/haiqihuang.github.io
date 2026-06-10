@@ -28,7 +28,7 @@ title: Haiqi Huang
 
 <!-- Internship 卡片模块 -->
 <div class="profile-card">
-  <h2 class="card-title">INTERNSHIPS & EXPERIENCE</h2>
+  <h2 class="card-title">INTERNSHIPS</h2>
   
   <ul class="education-list">
     {% for intern in site.data.internships %}
