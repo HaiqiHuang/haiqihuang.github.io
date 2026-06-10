@@ -1,20 +1,20 @@
-- degree: Master of Science(MSc) in Computing
-  school: Imperial College of Science, Technology and Medicine(Imperial)
+- degree: Master of Science (MSc) in Computing
+  school: Imperial College of Science, Technology and Medicine (Imperial)
   year: Expected 2026
-  detail:
+  details:
     - "Supervisor: Dr. Tom Crossland"
-    - "Porject: "
+    - "Project: 你的项目名称写在这里"
 
-- degree: Master of Laws(LLM)
-  school: University College London(UCL)
+- degree: Master of Laws (LLM)
+  school: University College London (UCL)
   year: 2025
-  detail:
+  details:
     - "Supervisor: Prof. Matt Fisher"
-    - "Thesis: "
+    - "Thesis: 你的论文题目写在这里"
 
-- degree: Bachelor of Laws(LLB)
+- degree: Bachelor of Laws (LLB)
   school: Wuhan University
   year: 2024
-  detail:
+  details:
     - "Supervisor: Dr. Zhai Han"
-    - "Thesis: "
+    - "Thesis: 你的本科论文题目"

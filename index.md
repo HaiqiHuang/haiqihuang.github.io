@@ -3,6 +3,7 @@ layout: default
 title: Haiqi Huang
 ---
 
+<!-- Education 卡片模块 -->
 <div class="profile-card">
   <h2 class="card-title">EDUCATION</h2>
   
@@ -11,9 +12,15 @@ title: Haiqi Huang
     <li>
       <div class="degree-name">{{ edu.degree }}</div>
       <div class="degree-meta">{{ edu.school }} &bull; {{ edu.year }}</div>
-      {% if edu.detail %}
-        <div class="degree-detail">{{ edu.detail }}</div>
+      
+      {% if edu.details %}
+        <ul class="degree-details-list">
+          {% for detail in edu.details %}
+            <li>{{ detail }}</li>
+          {% endfor %}
+        </ul>
       {% endif %}
+
     </li>
     {% endfor %}
   </ul>
@@ -24,7 +31,7 @@ title: Haiqi Huang
   <h2 class="card-title">LATEST THINKING</h2>
   
   <div class="thinking-list">
-    <!-- 循环读取最近的 3 篇文章 (你可以修改 limit 的数字) -->
+    <!-- 循环读取最近的 3 篇文章 -->
     {% for post in site.posts limit:3 %}
     <div class="thinking-item">
       <!-- 文章标题和链接 -->
