@@ -1,0 +1,12 @@
+- role: Legal Intern (Intellectual Property)
+  company: Awesome Law Firm LLP
+  duration: Jun 2025 - Aug 2025
+  details:
+    - "Drafted and reviewed IP licensing agreements."
+    - "Conducted legal research on patent infringement cases."
+
+- role: LegalTech Research Assistant
+  company: UCL Faculty of Laws
+  duration: Jan 2024 - May 2024
+  details:
+    - "Analyzed data privacy regulations using Python scripts."

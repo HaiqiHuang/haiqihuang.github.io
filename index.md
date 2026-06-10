@@ -26,6 +26,28 @@ title: Haiqi Huang
   </ul>
 </div>
 
+<!-- Internship 卡片模块 -->
+<div class="profile-card">
+  <h2 class="card-title">INTERNSHIPS & EXPERIENCE</h2>
+  
+  <ul class="education-list">
+    {% for intern in site.data.internships %}
+    <li>
+      <div class="degree-name">{{ intern.role }}</div>
+      <div class="degree-meta">{{ intern.company }} &bull; {{ intern.duration }}</div>
+      
+      {% if intern.details %}
+        <ul class="degree-details-list">
+          {% for detail in intern.details %}
+            <li>{{ detail }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
 <!-- Latest Thinking 卡片模块 -->
 <div class="profile-card">
   <h2 class="card-title">LATEST THINKING</h2>
