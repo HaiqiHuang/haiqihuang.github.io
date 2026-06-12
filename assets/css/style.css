@@ -176,7 +176,36 @@ footer {
 }
 
 /* =========================================
-   7. 响应式自适应排版 (Media Queries)
+   7. 表格样式 (Table Styling)
+   ========================================= */
+table {
+  width: 100%; /* 让表格占满文章区域的宽度 */
+  border-collapse: collapse; /* 【极其关键】合并相邻的边框，否则会出现丑陋的双横线 */
+  margin-bottom: 25px; /* 表格底部留白 */
+  font-size: 0.95em; /* 表格里的字可以稍微比正文小一点点 */
+}
+
+th, td {
+  border: 1px solid var(--border-color); /* 画出浅灰色的网格线 */
+  padding: 12px 15px; /* 增加内边距，让文字不要死死贴在边框上 */
+  line-height: 1.5;
+}
+
+th {
+  background-color: #f9f9f9; /* 给表头加上极浅的灰色背景 */
+  font-weight: 600; /* 表头文字加粗 */
+  text-align: left; /* 表头内容靠左对齐 */
+  color: var(--text-color);
+}
+
+/* 🏆 可选加分项：斑马线效果 (Zebra Stripes) */
+/* 让表格的偶数行带一点点底色，数据多的时候眼睛不容易看串行 */
+tr:nth-child(even) {
+  background-color: #fdfdfd;
+}
+
+/* =========================================
+   8. 响应式自适应排版 (Media Queries)
    放在最底部，根据屏幕变大自动放宽页面
    ========================================= */
 
